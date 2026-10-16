@@ -6,13 +6,33 @@ namespace GuiApplication
         {
             InitializeComponent();
             DisplayBackground();
+ 
 
         }
 
         private void DisplayBackground()
         {
-            this.BackgroundImage = Image.FromFile("C:\\Users\\Student\\source\\repos\\GUI\\GUI Application\\PART 2\\GUI APP\\GUI APP\\Images\\Landing Background.png");
+            this.BackgroundImage = Image.FromFile("C:\\Users\\Student\\source\\repos\\GUI\\GUI Application\\PART 2\\GuiApplication\\GuiApplication\\Images\\1 (1).png");
             this.BackgroundImageLayout = ImageLayout.Stretch;
+
+    
+            pictureBox1.Image = Image.FromFile(
+                @"C:\Users\Student\source\repos\GUI\GUI Application\PART 2\GuiApplication\GuiApplication\Images\Logo.png");
+
+            pictureBox1.Size = new Size(150, 100);
+            pictureBox1.Location = new Point(20, 20);
+
+       
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+
+            pictureBox1.BackColor = Color.Transparent;
+
+           
+            this.Controls.Add(pictureBox1);
+
+    
+            pictureBox1.BringToFront();
+        
         }
 
 
@@ -31,15 +51,7 @@ namespace GuiApplication
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            DisplayLogo();
-        }
-        private void DisplayLogo()
-        {
-            PictureBox pictureBox1 = new PictureBox();
-            pictureBox1.Image = Image.FromFile("C:\\Users\\Student\\source\\repos\\GUI\\GUI Application\\PART 2\\GUI APP\\GUI APP\\Images\\Logo.png");
+     
         }
 
     }
-}

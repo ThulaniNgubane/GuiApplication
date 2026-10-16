@@ -27,62 +27,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            UserInput = new System.Windows.Forms.TextBox();
-            ResponseBox = new System.Windows.Forms.TextBox();
-            SendBotton = new System.Windows.Forms.Button();
-            pictureBox1 = new System.Windows.Forms.PictureBox();
-
+            components = new System.ComponentModel.Container();
+            UserInput = new TextBox();
+            ResponseBox = new TextBox();
+            SendBotton = new Button();
+            pictureBox1 = new PictureBox();
+            notifyIcon1 = new NotifyIcon(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-
+            // 
             // UserInput
-            UserInput.Location = new System.Drawing.Point(214, 373);
+            // 
+            UserInput.BackColor = Color.White;
+            UserInput.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            UserInput.Location = new Point(214, 373);
             UserInput.Name = "UserInput";
-            UserInput.Size = new System.Drawing.Size(422, 23);
+            UserInput.Size = new Size(422, 27);
             UserInput.TabIndex = 0;
             UserInput.TextChanged += UserInput_TextChanged;
-
+            // 
             // ResponseBox
-            ResponseBox.Location = new System.Drawing.Point(214, 26);
+            // 
+            ResponseBox.BackColor = Color.FromArgb(255, 128, 128);
+            ResponseBox.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
+            ResponseBox.Location = new Point(214, 26);
             ResponseBox.Multiline = true;
-            ResponseBox.ReadOnly = true;
             ResponseBox.Name = "ResponseBox";
-            ResponseBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            ResponseBox.Size = new System.Drawing.Size(503, 305);
+            ResponseBox.ReadOnly = true;
+            ResponseBox.ScrollBars = ScrollBars.Vertical;
+            ResponseBox.Size = new Size(503, 305);
             ResponseBox.TabIndex = 1;
-
+            // 
             // SendBotton
-            SendBotton.Location = new System.Drawing.Point(642, 373);
+            // 
+            SendBotton.Location = new Point(642, 373);
             SendBotton.Name = "SendBotton";
-            SendBotton.Size = new System.Drawing.Size(75, 23);
+            SendBotton.Size = new Size(75, 23);
             SendBotton.TabIndex = 2;
             SendBotton.Text = "Send";
             SendBotton.UseVisualStyleBackColor = true;
             SendBotton.Click += SendBotton_Click;
-
+            // 
             // pictureBox1
-            pictureBox1.Location = new System.Drawing.Point(12, 26);
+            // 
+            pictureBox1.Location = new Point(33, 26);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new System.Drawing.Size(120, 85);
-            pictureBox1.SizeMode =
-                System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            pictureBox1.Size = new Size(99, 85);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
-
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
+            // 
             // MainApp
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode =
-                System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
-
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
             Controls.Add(SendBotton);
             Controls.Add(ResponseBox);
             Controls.Add(UserInput);
-
             Name = "MainApp";
-            Text = "Cybersecurity Bot";
-
+            Text = "Toolz Cybersecurity";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -94,5 +104,6 @@
         private System.Windows.Forms.TextBox ResponseBox;
         private System.Windows.Forms.Button SendBotton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private NotifyIcon notifyIcon1;
     }
 }
