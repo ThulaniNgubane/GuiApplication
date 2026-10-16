@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +17,14 @@ namespace GuiApplication
         {
             InitializeComponent();
             DisplayBackground();
-
+            PlayGreeting();
+        }
+        private void PlayGreeting()
+        {
+            using (SoundPlayer player = new SoundPlayer("C:\\Users\\Student\\source\\repos\\GUI\\GUI Application\\GUI Application\\voice\\Greetings.wav"))
+            {
+                player.Play();
+            }
         }
 
         private void DisplayBackground()
