@@ -21,7 +21,7 @@ namespace GuiApplication
         }
         private void PlayGreeting()
         {
-            using (SoundPlayer player = new SoundPlayer("C:\\Users\\Student\\source\\repos\\GUI\\GUI Application\\GUI Application\\voice\\Greetings.wav"))
+            using (SoundPlayer player = new SoundPlayer("C:\\Users\\Student\\source\\repos\\GUI\\GUI Application\\PART 2\\GuiApplication\\GuiApplication\\voice\\Greetings.wav"))
             {
                 player.Play();
             }
@@ -39,12 +39,12 @@ namespace GuiApplication
 
             pictureBox1.Size = new Size(150, 100);
             pictureBox1.Location = new Point(20, 20);
-          
+
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
 
             pictureBox1.BackColor = Color.Transparent;
 
-    
+
             this.Controls.Add(pictureBox1);
 
             pictureBox1.BringToFront();
@@ -101,7 +101,11 @@ namespace GuiApplication
 
         private void UserInput_TextChanged(object sender, EventArgs e)
         {
-    
+
         }
-    }
+
+        
+        }
+    
+    
 }
